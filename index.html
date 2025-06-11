@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>MediTrack - Patient Medicine & Appointment System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Medi<span>Track</span></h1>
+          </a>
+        </div>
+        <nav class="nav">
+          <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/appointments.html">Appointments</a></li>
+            <li><a href="pages/prescriptions.html">Prescriptions</a></li>
+            <li><a href="pages/login.html" class="btn-login">Login</a></li>
+            <li><a href="pages/register.html" class="btn-register">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h2>Manage Your Healthcare Journey</h2>
+            <p>Track appointments, medications, and prescriptions all in one place.</p>
+            <div class="hero-buttons">
+              <a href="pages/register.html" class="btn btn-primary">Get Started</a>
+              <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg" alt="Healthcare professional with patient">
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container">
+          <h2 class="section-title">Key Features</h2>
+          <div class="feature-cards">
+            <div class="feature-card">
+              <div class="feature-icon">📅</div>
+              <h3>Appointment Booking</h3>
+              <p>Schedule appointments with your preferred doctors at your convenience.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💊</div>
+              <h3>Medication Tracking</h3>
+              <p>Keep track of your prescriptions and medication schedules.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📋</div>
+              <h3>Medical History</h3>
+              <p>Access your medical records and history anytime, anywhere.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔔</div>
+              <h3>Reminders</h3>
+              <p>Get timely reminders for appointments and medication.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to take control of your healthcare?</h2>
+            <p>Join thousands of patients who manage their healthcare journey efficiently with MediTrack.</p>
+            <a href="pages/register.html" class="btn btn-primary">Register Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Medi<span>Track</span></h2>
+            <p>Your health, our priority</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages/appointments.html">Appointments</a></li>
+              <li><a href="pages/prescriptions.html">Prescriptions</a></li>
+              <li><a href="pages/login.html">Login</a></li>
+              <li><a href="pages/register.html">Register</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@meditrack.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Health Street, Medical City</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 MediTrack. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

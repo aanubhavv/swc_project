@@ -1,0 +1,247 @@
+/* Styles for Appointments page */
+
+.appointments-section {
+  padding: var(--spacing-xl) 0;
+}
+
+/* Tabs styling */
+.appointment-tabs {
+  display: flex;
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--neutral-300);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  margin-right: var(--spacing-md);
+}
+
+.tab-btn:hover {
+  color: var(--primary-color);
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* Tab content styling */
+.tab-content {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg);
+}
+
+.tab-pane {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Booking form styling */
+.booking-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.booking-form-container h3 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* No data message */
+.no-data {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+}
+
+.no-data p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+}
+
+.status-confirmed {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--success-color);
+}
+
+.status-pending {
+  background-color: rgba(255, 152, 0, 0.1);
+  color: var(--warning-color);
+}
+
+.status-cancelled {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--error-color);
+}
+
+.status-completed {
+  background-color: rgba(25, 118, 210, 0.1);
+  color: var(--primary-color);
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.btn-action {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.8rem;
+  border-radius: var(--border-radius);
+}
+
+.btn-reschedule {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+
+.btn-cancel {
+  background-color: var(--error-color);
+  color: var(--text-light);
+}
+
+/* Date selection helper */
+.date-helper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.date-helper p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Time slot grid */
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.time-slot {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.time-slot:hover {
+  border-color: var(--primary-color);
+}
+
+.time-slot.selected {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-color: var(--primary-color);
+}
+
+.time-slot.unavailable {
+  background-color: var(--neutral-200);
+  color: var(--neutral-500);
+  cursor: not-allowed;
+}
+
+/* Doctor info card */
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--neutral-100);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+}
+
+.doctor-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-details h4 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+.doctor-details p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .appointments-section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .appointment-tabs {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--spacing-xs);
+  }
+  
+  .tab-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .tab-content {
+    padding: var(--spacing-md);
+  }
+  
+  .table-container {
+    margin: 0 -var(--spacing-md);
+    width: calc(100% + var(--spacing-md) * 2);
+  }
+  
+  th, td {
+    padding: var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .doctor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .time-slot-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
